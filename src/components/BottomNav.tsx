@@ -48,6 +48,13 @@ function NavIcon({ id, isActive }: { id: string; isActive: boolean }) {
           <path d="M16 3.13a4 4 0 0 1 0 7.75" />
         </svg>
       )
+    case 'ar':
+      return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+          {isActive ? <circle cx="12" cy="13" r="4" fill="currentColor" /> : <circle cx="12" cy="13" r="4" />}
+        </svg>
+      )
     case 'menu':
       return (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
@@ -73,7 +80,7 @@ export default function BottomNav() {
     { id: 'events', label: 'События' },
     { id: 'zones', label: 'Зоны' },
     { id: 'angle', label: 'Обзор' },
-    { id: 'first-person', label: 'Пешком' },
+    { id: 'ar', label: 'AR' },
     { id: 'friends', label: 'Друзья' },
     { id: 'menu', label: 'Ещё' },
   ]

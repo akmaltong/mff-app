@@ -12,6 +12,9 @@ export default defineConfig({
     sourcemap: true
   },
   optimizeDeps: {
-    include: ['three']
+    include: ['three'],
+    // js-aruco2 is CommonJS; exclude from pre-bundling so Rollup's CJS plugin
+    // handles the require() chain between aruco.js and the dictionary files.
+    exclude: ['js-aruco2']
   }
 })
